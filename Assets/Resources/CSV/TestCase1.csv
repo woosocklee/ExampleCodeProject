@@ -1,0 +1,6 @@
+ItemNumber,ItemName,Consumable
+int,string,bool
+0,Æ÷¼Ç,TRUE
+1,³ª¹µ°¡Áö,FALSE
+2,ÃÑ¾Ë,TRUE
+3,È­¿°º´,TRUE
