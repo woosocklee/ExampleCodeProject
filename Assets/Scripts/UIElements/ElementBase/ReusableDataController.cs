@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using System.Threading;
-public abstract class UIDataLoader<T> : MonoBehaviour where T : ILoadData
+public abstract class ReusableDataController<T> : MonoBehaviour
 {
     [SerializeField]
     private UIDataCell<T> BaseCell;
@@ -83,14 +83,10 @@ public abstract class UIDataLoader<T> : MonoBehaviour where T : ILoadData
 
 }
 
-public class UIDataCell<T> : MonoBehaviour where T : ILoadData
+public abstract class UIDataCell<T> : MonoBehaviour
 {
     public T currentData;
 
-    public void UpdateCell(T data)
-    {
-        currentData = data;
-        currentData.LoadData();
-    }
+    public abstract void UpdateCell(T data);
 
 }
